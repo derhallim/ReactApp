@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import helloWorld from './secondary';
+import SearchBar from './components/search_bar'
+const API_KEY = 'AIzaSyC69Mnjj8YYcaNxFueZON3Z1AEkegh4fvs'
 
 const app = document.getElementById('app');
 
-const val = helloWorld('webpack');
-
-alert(`ES6 features work with Webpack and bundling data from another file.. message: ${val}`)
-
-const Element = () => {
-  return <h1>Hello, React .. react also works</h1>
+const App = () => {
+  return (
+      <div>
+      <SearchBar />
+      </div>
+  )
 }
 
-ReactDom.render(<Element />, app)
+ReactDom.render(<App />, app)
